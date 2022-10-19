@@ -1,0 +1,103 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h2>enter your details</h2>
+        <form action="print.html" method="post" >
+            <table cellspacing="6" cell padding="2">
+                <tr>
+
+                    <td><label for="title">Title</label></td>
+                <td><select id= 
+                    "title" name="title" >
+                    <option value="1" selected>mr.</option>
+                    <option value="2" >mrs.</option>
+                    <option value="3" selected>ms.</option>
+
+                
+                </select>                         
+                </td>
+                </tr>
+                <tr>
+                    <td><label for="firstName">First Name</label></td>
+                    <td><input type="text" id="firstName" name="firstName" placeholder="you first name"></td>
+                </tr>
+                <tr>
+                    <td><label for="lastName">Last Name</label></td>
+                    <td><input type="text" id="lastName" name="lastName " placeholder="your last name"></td>                
+                </tr>
+                <tr>
+                    <td><label for="address">Address</label></td>
+                    <td><textarea name="address" id="address" cols="30" rows="10" placeholder="your current address"></textarea></td>
+                </tr>
+                <tr>
+                    <td><label for="mobile no.">Mobile:</label></td>
+                    <td><input type="tel" id="mobile no." name="mobile no."></td>
+                </tr>
+                <tr>
+                    <td><label for="email">E-mail</label></td>
+                    <td><input type="email" id="email" name="email"></td>
+                </tr>
+                <tr>
+                    <td><label for="username">Username</label></td>
+                    <td><input type="text" id="username" name="username"></td>
+                
+            
+                </tr>
+                <tr>
+                    <td><label for="password">Password:</label></td>
+                    <td><input type="password" id="password" name="password"></td>
+                </tr>
+                <tr>
+                    <td><label for="dob">Date Of Birth</label></td>
+                    <td><input type="date" id="dob" name="dob" placeholder="dd-mm-yy"></td>
+                </tr>
+                <tr>
+                    <td><label for="gender">Gender</label></td>
+                    <td><input type="radio" id="gender" name="gender">male</td>
+                    <td><input type="radio" id="gender" name="gender">female</td>
+                </tr>
+                <tr>
+                    <td><label for="confirm">Can we contact you?</label></td>
+                    <td><input type="radio" id="confirm" name="confirm">yes </td>
+                    <td><input type="radio" id="confirm" name="confirm">No </td>
+                </tr>
+                <tr>
+                    <td><label for="qs.">communication preference:</label></td>
+                    <td><input type="checkbox" id="communication preference" name="communication preference">E-mail</td>
+                    <td><input type="checkbox" id="communication preference" name="communication preference">SMS</td>
+                </tr>
+                <tr>
+                    <td><label for="upload">upload your photo</label></td>
+                    <td><input type="file" id="photoFile" name="photoFile" accept="image/*,*.pdf"></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox">i agree to the <a href="terms and conditions.html" title="terms and conditions">terms and conditions</a> of the website.</td>
+                </tr>
+                <tr>
+                    <td><input type="Submit" onclick="javascript:saveData();"id="submit"></td>
+                    <td><input type="reset"id=reset name="reset" value="reset"></td>
+                </tr>
+                <tr>
+                    <td><input type="hidden"id="pageName" name="pageName" value="10"></td>
+                </tr>
+
+            </table>
+        </form>
+        <script>
+            function saveData(){
+                var firstName = document.getElementById('firstName').value;
+                var lastName = document.getElementById('lastName').value;
+                var address = document.getElementById('address').value;
+
+                localStorage.setItem('firstName',firstName);
+                localStorage.setItem('lastName',lastName);
+                localStorage.setItem('address',address);
+
+            }
+        </script>
+        
+        <center><h3></h3></center>
+    </body>
+</html>
